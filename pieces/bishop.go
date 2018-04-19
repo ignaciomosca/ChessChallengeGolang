@@ -2,7 +2,7 @@ package pieces
 
 import (
 	piece "chess/primitives"
-	u "chess/utils"
+	"chess/utils"
 )
 
 // Bishop represents a Bishop in a Chessboard
@@ -15,7 +15,7 @@ func CreateBishop(row, col int) Bishop {
 }
 
 func (b Bishop) Attacks(dest piece.Attacks) bool {
-	return u.Abs(dest.Row() - b.Row()) == u.Abs(dest.Col() - b.Col());
+	return utils.Abs(dest.Row() - b.Row()) == utils.Abs(dest.Col() - b.Col());
 }
 
 func (b Bishop) Row() int { return b.Piece.Row }
