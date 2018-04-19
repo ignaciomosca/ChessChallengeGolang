@@ -10,8 +10,10 @@ func CreateRook(row, col int) Rook {
 	return Rook{piece.Piece{'R', row, col}}
 }
 
-func (rook Rook) Attacks(dest piece.Attacks) bool {
-	return false
+func (r Rook) Attacks(dest piece.Attacks) bool {
+	sameRow := r.Row() == dest.Row()
+	sameCol := r.Col() == dest.Col()
+	return sameRow || sameCol
 }
 
 func (r Rook) Row() int { return r.Piece.Row }

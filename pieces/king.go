@@ -10,7 +10,7 @@ func CreateKing(row, col int) King {
 	return King{piece.Piece{'K', row, col}}
 }
 
-func (k King) Attacks(p piece.Attacks) bool {
+func (k King) Attacks(dest piece.Attacks) bool {
 	row := k.Row()
 	col := k.Col()
 	xMoves := []int{-1, -1, -1, 0, 1, 1, 1, 0}
@@ -20,12 +20,12 @@ func (k King) Attacks(p piece.Attacks) bool {
 		destRow := row + xMoves[i]
 		destCol := col + yMoves[i]
 		if destRow > 0 && destCol > 0 {
-			createPiece := CreatePiece(p, destRow, destCol)
+			createPiece := CreatePiece(dest, destRow, destCol)
 			possibleMoves[createPiece] = true
 		}
 	}
 
-	return possibleMoves[p]
+	return possibleMoves[dest]
 }
 
 func (k King) Row() int { return k.Piece.Row }

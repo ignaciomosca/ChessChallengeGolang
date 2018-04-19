@@ -25,6 +25,7 @@ func CreateBoardWithPieces(m, n int, used map[primitives.Attacks]bool) Board {
 	for i := range board {
 		board[i] = make([]rune, n)
 	}
+	addUsedPieces(board, used)
 	return Board{m, n, board, used}
 }
 

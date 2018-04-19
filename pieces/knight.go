@@ -13,7 +13,20 @@ func CreateKnight(row, col int) Knight {
 }
 
 func (k Knight) Attacks(dest piece.Attacks) bool {
-	return false
+	row := k.Row()
+	col := k.Col()
+	xMoves := []int{1, 2, 2, 1, -1, -2, -2, -1}
+	yMoves := []int{-2, -1, 1, 2, 2, 1, -1, -2}
+	possibleMoves := make(map[piece.Attacks]bool)
+	for i := 0; i < 8; i++ {
+		destRow := row + xMoves[i]
+		destCol := col + yMoves[i]
+		if destRow > 0 && destCol > 0 {
+			createPiece := CreatePiece(dest, destRow, destCol)
+			possibleMoves[createPiece] = true
+		}
+	}
+	return possibleMoves[dest]
 }
 
 func (k Knight) Row() int { return k.Piece.Row }

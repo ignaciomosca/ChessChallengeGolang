@@ -1,6 +1,9 @@
 package pieces
 
-import piece "chess/primitives"
+import (
+	piece "chess/primitives"
+	"chess/utils"
+)
 
 type Queen struct {
 	piece.Piece
@@ -10,8 +13,11 @@ func CreateQueen(row, col int) Queen {
 	return Queen{piece.Piece{'Q', row, col}}
 }
 
-func (queen Queen) Attacks(dest piece.Attacks) bool {
-	return false
+func (q Queen) Attacks(dest piece.Attacks) bool {
+	sameRow := q.Row() == dest.Row()
+	sameCol := q.Col() == dest.Col()
+	sameDiag := utils.Abs(dest.Row()-q.Row()) == utils.Abs(dest.Col()-q.Col())
+	return sameRow || sameCol || sameDiag
 }
 
 func (q Queen) Row() int { return q.Piece.Row }
