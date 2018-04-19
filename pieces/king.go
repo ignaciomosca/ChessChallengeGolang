@@ -13,3 +13,9 @@ func CreateKing(row, col int) King {
 func (k King) Attacks() bool {
 	return false
 }
+
+func (k King) Row() int { return k.Piece.Row }
+
+func (k King) Col() int { return k.Piece.Col }
+
+func (k King) Name() string { return k.Piece.Name }

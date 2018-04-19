@@ -13,3 +13,9 @@ func CreateRook(row, col int) Rook {
 func (rook Rook) Attacks() bool {
 	return false
 }
+
+func (k Rook) Row() int { return k.Piece.Row }
+
+func (k Rook) Col() int { return k.Piece.Col }
+
+func (k Rook) Name() string { return k.Piece.Name }

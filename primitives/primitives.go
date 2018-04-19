@@ -6,6 +6,9 @@ type Piece struct {
 	Col int
 }
 
-type attacks interface {
+type Attacks interface {
 	Attacks() bool
+	Row() int
+	Col() int
+	Name() string
 }
