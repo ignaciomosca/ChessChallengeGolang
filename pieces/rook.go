@@ -7,15 +7,15 @@ type Rook struct {
 }
 
 func CreateRook(row, col int) Rook {
-	return Rook{piece.Piece{"R", row, col}}
+	return Rook{piece.Piece{'R', row, col}}
 }
 
-func (rook Rook) Attacks() bool {
+func (rook Rook) Attacks(dest piece.Attacks) bool {
 	return false
 }
 
-func (k Rook) Row() int { return k.Piece.Row }
+func (r Rook) Row() int { return r.Piece.Row }
 
-func (k Rook) Col() int { return k.Piece.Col }
+func (r Rook) Col() int { return r.Piece.Col }
 
-func (k Rook) Name() string { return k.Piece.Name }
+func (r Rook) Name() rune { return r.Piece.Name }

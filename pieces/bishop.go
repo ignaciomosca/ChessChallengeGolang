@@ -1,21 +1,25 @@
 package pieces
 
-import piece "chess/primitives"
+import (
+	piece "chess/primitives"
+	u "chess/utils"
+)
 
+// Bishop represents a Bishop in a Chessboard
 type Bishop struct {
 	piece.Piece
 }
 
 func CreateBishop(row, col int) Bishop {
-	return Bishop{piece.Piece{"B", row, col}}
+	return Bishop{piece.Piece{'B', row, col}}
 }
 
-func (bishop Bishop) Attacks() bool {
-	return false
+func (b Bishop) Attacks(dest piece.Attacks) bool {
+	return u.Abs(dest.Row() - b.Row()) == u.Abs(dest.Col() - b.Col());
 }
 
-func (k Bishop) Row() int { return k.Piece.Row }
+func (b Bishop) Row() int { return b.Piece.Row }
 
-func (k Bishop) Col() int { return k.Piece.Col }
+func (b Bishop) Col() int { return b.Piece.Col }
 
-func (k Bishop) Name() string { return k.Piece.Name }
+func (b Bishop) Name() rune { return b.Piece.Name }

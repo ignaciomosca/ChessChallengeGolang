@@ -1,14 +1,14 @@
 package primitives
 
 type Piece struct {
-	Name string
+	Name rune
 	Row int
 	Col int
 }
 
 type Attacks interface {
-	Attacks() bool
+	Attacks(piece Attacks) bool
 	Row() int
 	Col() int
-	Name() string
+	Name() rune
 }

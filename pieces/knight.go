@@ -9,10 +9,10 @@ type Knight struct {
 }
 
 func CreateKnight(row, col int) Knight {
-	return Knight{piece.Piece{"N", row, col}}
+	return Knight{piece.Piece{'N', row, col}}
 }
 
-func (k Knight) Attacks() bool {
+func (k Knight) Attacks(dest piece.Attacks) bool {
 	return false
 }
 
@@ -20,4 +20,4 @@ func (k Knight) Row() int { return k.Piece.Row }
 
 func (k Knight) Col() int { return k.Piece.Col }
 
-func (k Knight) Name() string { return k.Piece.Name }
+func (k Knight) Name() rune { return k.Piece.Name }
