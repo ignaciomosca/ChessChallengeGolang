@@ -22,7 +22,7 @@ func (k Knight) Attacks(dest piece.Attacks) bool {
 		destRow := row + xMoves[i]
 		destCol := col + yMoves[i]
 		if destRow > 0 && destCol > 0 {
-			createPiece := CreatePiece(dest, destRow, destCol)
+			createPiece := CreatePiece(dest.Name(), destRow, destCol)
 			possibleMoves[createPiece] = true
 		}
 	}

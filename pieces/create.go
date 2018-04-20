@@ -2,8 +2,8 @@ package pieces
 
 import "chess/primitives"
 
-func CreatePiece(piece primitives.Attacks, row, col int) primitives.Attacks{
-	switch piece.Name() {
+func CreatePiece(piece rune, row, col int) primitives.Attacks{
+	switch piece {
 		case 'Q':
 			return CreateQueen(row, col)
 		case 'N':

@@ -36,17 +36,18 @@ func addUsedPieces(board [][]rune, used map[primitives.Attacks]bool) {
 	}
 }
 
-func (board Board) ShowBoard() {
+func ShowBoard(board Board) {
+	println("------------------------------")
 	for i := 1; i < board.M; i++ {
 		for j := 1; j < board.N; j++ {
-			println(string(board.board[i][j]))
+			print(string(board.board[i][j]))
 		}
 		println()
 	}
-	println()
+	println("------------------------------")
 }
 
-func (board *Board) place(piece primitives.Attacks) *Board {
+func (board *Board) Place(piece primitives.Attacks) *Board {
 	board.used[piece] = true
 	return CreateBoardWithPieces(board.M, board.N, board.used)
 }
