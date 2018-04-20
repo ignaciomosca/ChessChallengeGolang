@@ -46,13 +46,13 @@ func (board Board) ShowBoard() {
 	println()
 }
 
-func (board Board) place(piece primitives.Attacks) Board {
+func (board *Board) place(piece primitives.Attacks) Board {
 	board.used[piece] = true
 	return CreateBoardWithPieces(board.M, board.N, board.used)
 }
 
 // FindPiece locates a piece in a board with coordinates row,col
-func (b Board) FindPiece(row, col int) rune {
+func (b *Board) FindPiece(row, col int) rune {
 	result := b.board[row][col]
 	if result == '\u0000' {
 		return '_'
@@ -62,13 +62,13 @@ func (b Board) FindPiece(row, col int) rune {
 }
 
 // IsSafe return true if no other piece in the board gets attacked by c and if c is not already placed
-func (b Board) IsSafe(c primitives.Attacks) bool {
-	doesNotAttackOtherPieces := doesNotAttackOtherPieces(b.used, c);
-	return doesNotAttackOtherPieces && b.notYetPlaced(c);
+func (b *Board) IsSafe(c primitives.Attacks) bool {
+	doesNotAttackOtherPieces := doesNotAttackOtherPieces(b.used, c)
+	return doesNotAttackOtherPieces && b.notYetPlaced(c)
 }
 
 func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitives.Attacks) bool {
-	for p:= range usedPieces {
+	for p := range usedPieces {
 		if p.Attacks(c) || c.Attacks(p) {
 			return false
 		}
@@ -76,6 +76,6 @@ func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitiv
 	return true
 }
 
-func (b Board) notYetPlaced(c primitives.Attacks) bool {
+func (b *Board) notYetPlaced(c primitives.Attacks) bool {
 	return b.board[c.Row()][c.Col()] == '\u0000'
 }
