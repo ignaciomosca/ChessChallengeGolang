@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73e8572-30d6-4660-b579-232c60888916" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pieces/king_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pieces/knight_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pieces/queen_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pieces/rook_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/board/board.go" beforeDir="false" afterPath="$PROJECT_DIR$/board/board.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pieces/bishop_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/bishop_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,17 +19,17 @@
       <file leaf-file-name="knight.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pieces/knight.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="-182">
               <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="king_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="king_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pieces/king_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="28">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="62" />
               <folding>
                 <element signature="e#16#75#0" expanded="true" />
               </folding>
@@ -37,20 +37,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/board/board.go">
+      <file leaf-file-name="knight_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pieces/knight_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding>
+                <element signature="e#16#75#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bishop.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pieces/bishop.go">
+      <file leaf-file-name="queen_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pieces/queen_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="192">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+              <folding>
+                <element signature="e#17#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rook_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pieces/rook_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+              <folding>
+                <element signature="e#17#76#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +88,7 @@
       <file leaf-file-name="create.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pieces/create.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="253">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
@@ -79,7 +97,7 @@
       <file leaf-file-name="king.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pieces/king.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="313">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
@@ -90,15 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="primitives.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/primitives/primitives.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -135,6 +144,8 @@
       <find>bishopB</find>
       <find>bishop</find>
       <find>TestAttack</find>
+      <find>knight</find>
+      <find>King</find>
     </findStrings>
     <replaceStrings>
       <replace>Piece</replace>
@@ -148,6 +159,9 @@
       <replace>king</replace>
       <replace>TestBishopAttack</replace>
       <replace>TestKingAttack</replace>
+      <replace>queen</replace>
+      <replace>rook</replace>
+      <replace>Knight</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -183,6 +197,9 @@
         <option value="$PROJECT_DIR$/pieces/bishop.go" />
         <option value="$PROJECT_DIR$/pieces/bishop_test.go" />
         <option value="$PROJECT_DIR$/pieces/king_test.go" />
+        <option value="$PROJECT_DIR$/pieces/knight_test.go" />
+        <option value="$PROJECT_DIR$/pieces/queen_test.go" />
+        <option value="$PROJECT_DIR$/pieces/rook_test.go" />
       </list>
     </option>
   </component>
@@ -255,8 +272,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.king_test.go">
-    <configuration name="TestAttack7 in chess/pieces" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestQueenDoesNotAttack in chess/pieces">
+    <configuration name="TestQueenDoesNotAttack in chess/pieces" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <working_directory value="$PROJECT_DIR$/pieces" />
       <go_parameters value="-i" />
@@ -265,29 +282,7 @@
       <package value="chess/pieces" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestAttack7$" />
-    </configuration>
-    <configuration name="TestKingAttack5 in chess/pieces" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <working_directory value="$PROJECT_DIR$/pieces" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="chess/pieces" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestKingAttack5$" />
-    </configuration>
-    <configuration name="TestKingAttack6 in chess/pieces" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <working_directory value="$PROJECT_DIR$/pieces" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="chess/pieces" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestKingAttack6$" />
+      <pattern value="^TestQueenDoesNotAttack$" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="chess" />
@@ -299,15 +294,14 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="bishop_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test pieces" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <working_directory value="$PROJECT_DIR$/pieces" />
-      <go_parameters value="-i" />
       <framework value="gotest" />
-      <kind value="FILE" />
+      <kind value="DIRECTORY" />
       <package value="awesomeProject" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/pieces/bishop_test.go" />
+      <directory value="$PROJECT_DIR$/pieces" />
+      <filePath value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="king_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="chess" />
@@ -319,39 +313,44 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/pieces/king_test.go" />
     </configuration>
+    <configuration name="knight_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <working_directory value="$PROJECT_DIR$/pieces" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="awesomeProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/pieces/knight_test.go" />
+    </configuration>
+    <configuration name="queen_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <working_directory value="$PROJECT_DIR$/pieces" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="awesomeProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/pieces/queen_test.go" />
+    </configuration>
     <list>
-      <item itemvalue="Go Test.bishop_test.go" />
-      <item itemvalue="Go Test.TestAttack7 in chess/pieces" />
       <item itemvalue="Go Test.king_test.go" />
-      <item itemvalue="Go Test.TestKingAttack5 in chess/pieces" />
-      <item itemvalue="Go Test.TestKingAttack6 in chess/pieces" />
+      <item itemvalue="Go Test.knight_test.go" />
+      <item itemvalue="Go Test.go test pieces" />
+      <item itemvalue="Go Test.queen_test.go" />
+      <item itemvalue="Go Test.TestQueenDoesNotAttack in chess/pieces" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestQueenDoesNotAttack in chess/pieces" />
+        <item itemvalue="Go Test.queen_test.go" />
+        <item itemvalue="Go Test.go test pieces" />
+        <item itemvalue="Go Test.knight_test.go" />
         <item itemvalue="Go Test.king_test.go" />
-        <item itemvalue="Go Test.TestKingAttack6 in chess/pieces" />
-        <item itemvalue="Go Test.TestKingAttack5 in chess/pieces" />
-        <item itemvalue="Go Test.bishop_test.go" />
-        <item itemvalue="Go Test.TestAttack7 in chess/pieces" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="bishop_test_go - 2018.04.19 at 15h 01m 10s.xml">
-      <configuration name="bishop_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestAttack7_in_chess_pieces - 2018.04.19 at 15h 01m 45s.xml">
-      <configuration name="TestAttack7 in chess/pieces" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="bishop_test_go - 2018.04.19 at 16h 19m 01s.xml">
-      <configuration name="bishop_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="bishop_test_go - 2018.04.20 at 11h 09m 09s.xml">
-      <configuration name="bishop_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="king_test_go - 2018.04.20 at 11h 09m 12s.xml">
-      <configuration name="king_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="king_test_go - 2018.04.20 at 11h 11m 53s.xml">
       <configuration name="king_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -367,18 +366,34 @@
     <history-entry file="king_test_go - 2018.04.20 at 11h 12m 35s.xml">
       <configuration name="king_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="king_test_go - 2018.04.20 at 11h 12m 47s.xml">
+      <configuration name="king_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="knight_test_go - 2018.04.20 at 11h 37m 45s.xml">
+      <configuration name="knight_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_pieces - 2018.04.20 at 11h 41m 20s.xml">
+      <configuration name="go test pieces" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="queen_test_go - 2018.04.20 at 11h 46m 40s.xml">
+      <configuration name="queen_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestQueenDoesNotAttack_in_chess_pieces - 2018.04.20 at 11h 46m 53s.xml">
+      <configuration name="TestQueenDoesNotAttack in chess/pieces" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="746" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2977273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2977273" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007576" side_tool="true" weight="0.32994923" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.33106962" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.33106962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" weight="0.3293718" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -389,7 +404,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -424,27 +438,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/primitives/primitives.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/queen.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/board/board.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -739,31 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/create.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/king.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hello.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/knight.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -777,12 +749,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/king.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/create.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/knight.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pieces/king_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="28">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="62" />
           <folding>
             <element signature="e#16#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/knight_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/queen_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+          <folding>
+            <element signature="e#17#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/rook_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+          <folding>
+            <element signature="e#17#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
