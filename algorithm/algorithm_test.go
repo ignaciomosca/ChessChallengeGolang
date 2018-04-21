@@ -8,11 +8,13 @@ import (
 
 func TestNQueen(t *testing.T) {
 	testBoard := board.CreateBoard(9, 9)
-	solutions := Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, make(map[*board.Board]bool), make(map[*board.Board]bool))
+	solutions := []board.Board{}
+	testedConfigurations:= []board.Board{}
+	Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, &testedConfigurations)
 
 	keys := []board.Board{}
-	for k := range solutions {
-		keys = append(keys, *k)
+	for _, k := range solutions {
+		keys = append(keys, k)
 	}
 
 	for _, b := range keys {
@@ -24,11 +26,13 @@ func TestNQueen(t *testing.T) {
 
 func Test3x3Board2Kings1Rook(t *testing.T){
 	testBoard := board.CreateBoard(4, 4)
-	solutions := Solution(testBoard, []rune{'K','K','R'}, make(map[*board.Board]bool), make(map[*board.Board]bool))
+	solutions := []board.Board{}
+	testedConfigurations:= []board.Board{}
+	Solution(testBoard, []rune{'K','K','R'}, &solutions, &testedConfigurations)
 
 	keys := []board.Board{}
-	for k := range solutions {
-		keys = append(keys, *k)
+	for _,k := range solutions {
+		keys = append(keys, k)
 	}
 
 	for _, b := range keys {
@@ -40,11 +44,13 @@ func Test3x3Board2Kings1Rook(t *testing.T){
 
 func Test4x4Board2Rooks4Knights(t *testing.T){
 	testBoard := board.CreateBoard(5, 5)
-	solutions := Solution(testBoard, []rune{'N','N','N', 'N', 'R', 'R'}, make(map[*board.Board]bool), make(map[*board.Board]bool))
+	solutions := []board.Board{}
+	testedConfigurations:= []board.Board{}
+	Solution(testBoard, []rune{'N','N','N', 'N', 'R', 'R'}, &solutions, &testedConfigurations)
 
 	keys := []board.Board{}
-	for k := range solutions {
-		keys = append(keys, *k)
+	for _,k := range solutions {
+		keys = append(keys, k)
 	}
 
 	for _, b := range keys {

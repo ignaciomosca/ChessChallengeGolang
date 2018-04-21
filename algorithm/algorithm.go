@@ -6,7 +6,7 @@ import (
 	"reflect"
 )
 
-func Solution(board b.Board, pieces []rune, solutions map[*b.Board]bool, testedConfigurations map[*b.Board]bool) map[*b.Board]bool {
+func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigurations *[]b.Board) *[]b.Board {
 	if len(pieces) != 0 {
 		for i := 1; i < board.M; i++ {
 			for j := 1; j < board.N; j++ {
@@ -15,12 +15,11 @@ func Solution(board b.Board, pieces []rune, solutions map[*b.Board]bool, testedC
 					modifiedBoard := b.Place(board, c)
 					if len(pieces) != 1 {
 						if !contains(&modifiedBoard, testedConfigurations) {
-							testedConfigurations[&modifiedBoard] = true
-							Solution(modifiedBoard, removeFirstElement(pieces), solutions, testedConfigurations)
+							Solution(modifiedBoard, removeFirstElement(pieces), solutions, add(testedConfigurations, modifiedBoard))
 						}
 					} else {
 						if !contains(&modifiedBoard, solutions) {
-							solutions[&modifiedBoard] = true
+							add(solutions, modifiedBoard)
 						}
 					}
 				}
@@ -29,9 +28,14 @@ func Solution(board b.Board, pieces []rune, solutions map[*b.Board]bool, testedC
 	}
 	return solutions
 }
+func add(boardList *[]b.Board, newBoard b.Board) *[]b.Board {
+	newCollection := append(*boardList, newBoard)
+	return &newCollection
+}
 
-func contains(board *b.Board, testedConfigurations map[*b.Board]bool) bool {
-	for k := range testedConfigurations {
+
+func contains(board *b.Board, testedConfigurations *[]b.Board) bool {
+	for k := range *testedConfigurations {
 		if reflect.DeepEqual(k, board) {
 			return true
 		}
