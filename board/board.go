@@ -16,6 +16,7 @@ func CreateBoard(m, n int) *Board {
 	for i := range board {
 		board[i] = make([]rune, n+1)
 	}
+	initializeBoard(board, m+1, n+1)
 	return &Board{m+1, n+1, board, make(map[primitives.Attacks]bool)}
 }
 
@@ -25,19 +26,27 @@ func CreateBoardWithPieces(m, n int, used map[primitives.Attacks]bool) *Board {
 	for i := range board {
 		board[i] = make([]rune, n+1)
 	}
-	addUsedPieces(board, used)
+	initializeBoard(board, m+1, n+1)
+	addUsedPieces(&board, used)
 	return &Board{m+1, n+1, board, used}
 }
 
+func initializeBoard(runes [][]rune, m,n int) {
+	for i:=1;i<m;i++{
+		for j:=1;j<n;j++{
+			runes[i][j]='_'
+		}
+	}
+}
+
 // usedPieces pieces to be set in the board
-func addUsedPieces(board [][]rune, used map[primitives.Attacks]bool) {
+func addUsedPieces(board *[][]rune, used map[primitives.Attacks]bool) {
 	for piece := range used {
-		board[piece.Row()][piece.Col()] = piece.Name()
+		(*board)[piece.Row()][piece.Col()] = piece.Name()
 	}
 }
 
 func ShowBoard(board Board) {
-	println("------------------------------")
 	for i := 1; i < board.M; i++ {
 		for j := 1; j < board.N; j++ {
 			print(string(board.board[i][j]))
@@ -47,25 +56,15 @@ func ShowBoard(board Board) {
 	println("------------------------------")
 }
 
-func (board *Board) Place(piece primitives.Attacks) *Board {
+func Place(board *Board, piece primitives.Attacks) *Board {
 	board.used[piece] = true
 	return CreateBoardWithPieces(board.M, board.N, board.used)
 }
 
-// FindPiece locates a piece in a board with coordinates row,col
-func (b *Board) FindPiece(row, col int) rune {
-	result := b.board[row][col]
-	if result == '\u0000' {
-		return '_'
-	} else {
-		return result
-	}
-}
-
 // IsSafe return true if no other piece in the board gets attacked by c and if c is not already placed
-func (b *Board) IsSafe(c primitives.Attacks) bool {
+func IsSafe(b *Board, c primitives.Attacks) bool {
 	doesNotAttackOtherPieces := doesNotAttackOtherPieces(b.used, c)
-	return doesNotAttackOtherPieces && b.notYetPlaced(c)
+	return doesNotAttackOtherPieces && notYetPlaced(b, c)
 }
 
 func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitives.Attacks) bool {
@@ -77,6 +76,7 @@ func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitiv
 	return true
 }
 
-func (b *Board) notYetPlaced(c primitives.Attacks) bool {
-	return b.board[c.Row()][c.Col()] == '\u0000'
+func notYetPlaced(b *Board, c primitives.Attacks) bool {
+	result := b.board[c.Row()][c.Col()] == '_'
+	return result
 }

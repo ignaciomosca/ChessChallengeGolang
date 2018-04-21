@@ -15,6 +15,17 @@ func TestBoardEquals(t *testing.T) {
 	assert.Equal(t, result, true, "board A == board B")
 }
 
+func TestBoard_Place(t *testing.T) {
+	board := CreateBoard(8, 8)
+	king := pieces.CreateKing(1,1)
+	Place(board, king)
+	assert.Equal(t, 1, len(board.used), "add piece to board")
+
+	queen := pieces.CreateQueen(2,2)
+	Place(board, queen)
+	assert.Equal(t, 2, len(board.used), "add another piece to board")
+}
+
 func TestSameBoardWithPieces(t *testing.T) {
 	kingA := pieces.CreateKing(1,1)
 	queenA := pieces.CreateQueen(2,2)
