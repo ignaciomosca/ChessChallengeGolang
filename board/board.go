@@ -12,23 +12,23 @@ type Board struct {
 
 // CreateBoard creates an empty board of MxN
 func CreateBoard(m, n int) *Board {
-	board := make([][]rune, m+1)
+	board := make([][]rune, m)
 	for i := range board {
-		board[i] = make([]rune, n+1)
+		board[i] = make([]rune, n)
 	}
-	initializeBoard(board, m+1, n+1)
-	return &Board{m+1, n+1, board, make(map[primitives.Attacks]bool)}
+	initializeBoard(board, m, n)
+	return &Board{m, n, board, make(map[primitives.Attacks]bool)}
 }
 
 // CreateBoardWithPieces creates a board with the pieces being @used
 func CreateBoardWithPieces(m, n int, used map[primitives.Attacks]bool) *Board {
-	board := make([][]rune, m+1)
+	board := make([][]rune, m)
 	for i := range board {
-		board[i] = make([]rune, n+1)
+		board[i] = make([]rune, n)
 	}
-	initializeBoard(board, m+1, n+1)
+	initializeBoard(board, m, n)
 	addUsedPieces(&board, used)
-	return &Board{m+1, n+1, board, used}
+	return &Board{m, n, board, used}
 }
 
 func initializeBoard(runes [][]rune, m,n int) {
