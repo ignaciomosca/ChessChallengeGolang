@@ -15,11 +15,12 @@ func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigur
 					modifiedBoard := b.Place(board, c)
 					if len(pieces) != 1 {
 						if !contains(&modifiedBoard, testedConfigurations) {
-							Solution(modifiedBoard, removeFirstElement(pieces), solutions, add(testedConfigurations, modifiedBoard))
+							*testedConfigurations = append(*testedConfigurations, modifiedBoard)
+							Solution(modifiedBoard, pieces[1:], solutions, testedConfigurations)
 						}
 					} else {
 						if !contains(&modifiedBoard, solutions) {
-							add(solutions, modifiedBoard)
+							*solutions = append(*solutions, modifiedBoard)
 						}
 					}
 				}
@@ -28,23 +29,13 @@ func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigur
 	}
 	return solutions
 }
-func add(boardList *[]b.Board, newBoard b.Board) *[]b.Board {
-	newCollection := append(*boardList, newBoard)
-	return &newCollection
-}
 
-
-func contains(board *b.Board, testedConfigurations *[]b.Board) bool {
+func contains(boardContains *b.Board, testedConfigurations *[]b.Board) bool {
 	for k := range *testedConfigurations {
-		if reflect.DeepEqual(k, board) {
+		if reflect.DeepEqual(k, boardContains) {
 			return true
 		}
 	}
 	return false
 }
 
-func removeFirstElement(pieces []rune) []rune {
-	r := pieces
-	remove := r[1:]
-	return remove
-}
