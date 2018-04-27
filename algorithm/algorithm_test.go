@@ -59,3 +59,15 @@ func TestNQueen(t *testing.T) {
 
 	assert.Equal(t, len(solutions), 92, "Test N Queen Problem")
 }
+
+func BenchmarkSolution(b *testing.B) {
+	testBoard := board.CreateBoard(8, 8)
+	var solutions []board.Board
+	var testedConfigurations []board.Board
+
+	Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, &testedConfigurations)
+
+	println("Solutions")
+	println(len(solutions))
+
+}

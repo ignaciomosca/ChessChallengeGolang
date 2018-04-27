@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73e8572-30d6-4660-b579-232c60888916" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/board/board_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/board/board_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/algorithm_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/algorithm/algorithm.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="e#19#75#0" expanded="true" />
               </folding>
@@ -67,20 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="board_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/board/board_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="207">
               <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hello.go">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="15" column="27" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="e#14#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,17 +93,17 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="304" selection-start-line="21" selection-start-column="304" selection-end-line="21" selection-end-column="304" />
+            <state relative-caret-position="195">
+              <caret line="16" column="166" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="166" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="algorithm_test.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="algorithm_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algorithm/algorithm_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="300">
+              <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="e#19#93#0" expanded="true" />
               </folding>
@@ -214,8 +219,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/board/board.go" />
         <option value="$PROJECT_DIR$/algorithm/algorithm.go" />
-        <option value="$PROJECT_DIR$/algorithm/algorithm_test.go" />
         <option value="$PROJECT_DIR$/board/board_test.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/algorithm/algorithm_test.go" />
       </list>
     </option>
   </component>
@@ -293,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.board_test.go">
+  <component name="RunManager" selected="Go Test.algorithm_test.go">
     <configuration name="go build chess/board" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -301,15 +307,6 @@
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/" />
       <package value="chess/board" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="go build chess/utils" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/" />
-      <package value="chess/utils" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -321,6 +318,16 @@
       <package value="awesomeProject" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="algorithm_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <working_directory value="$PROJECT_DIR$/algorithm" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="awesomeProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/algorithm/algorithm_test.go" />
     </configuration>
     <configuration name="board_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="chess" />
@@ -351,32 +358,23 @@
       <filePath value="$PROJECT_DIR$/" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build chess/utils" />
       <item itemvalue="Go Build.go build chess/board" />
       <item itemvalue="Go Test.go test utils" />
       <item itemvalue="Go Test.go test primitives" />
       <item itemvalue="Go Test.board_test.go" />
+      <item itemvalue="Go Test.algorithm_test.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.algorithm_test.go" />
         <item itemvalue="Go Test.board_test.go" />
         <item itemvalue="Go Test.go test primitives" />
         <item itemvalue="Go Test.go test utils" />
         <item itemvalue="Go Build.go build chess/board" />
-        <item itemvalue="Go Build.go build chess/utils" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBoard_Place_in_chess_board - 2018.04.27 at 17h 45m 38s.xml">
-      <configuration name="TestBoard_Place in chess/board" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestBoard_Place_in_chess_board - 2018.04.27 at 17h 46m 06s.xml">
-      <configuration name="TestBoard_Place in chess/board" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestBoard_Place_in_chess_board - 2018.04.27 at 17h 46m 22s.xml">
-      <configuration name="TestBoard_Place in chess/board" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="algorithm_test_go - 2018.04.27 at 17h 46m 40s.xml">
       <configuration name="algorithm_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -398,6 +396,15 @@
     <history-entry file="board_test_go - 2018.04.27 at 17h 53m 40s.xml">
       <configuration name="board_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="board_test_go - 2018.04.27 at 17h 54m 51s.xml">
+      <configuration name="board_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="algorithm_test_go - 2018.04.27 at 17h 55m 00s.xml">
+      <configuration name="algorithm_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="algorithm_test_go - 2018.04.27 at 17h 58m 22s.xml">
+      <configuration name="algorithm_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="744" extended-state="6" />
@@ -410,9 +417,9 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.4040747" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.4040747" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" weight="0.32597622" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924242" visible="true" weight="0.32597622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924242" weight="0.39898133" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -523,7 +530,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
@@ -586,7 +593,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
@@ -649,7 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
@@ -831,30 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="304" selection-start-line="21" selection-start-column="304" selection-end-line="21" selection-end-column="304" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/algorithm_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding>
-            <element signature="e#19#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/board/board.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171">
@@ -865,7 +848,7 @@
     <entry file="file://$PROJECT_DIR$/algorithm/algorithm.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="e#19#75#0" expanded="true" />
           </folding>
@@ -874,8 +857,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/board/board_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="207">
           <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="166" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#14#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/algorithm_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+          <folding>
+            <element signature="e#19#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
