@@ -2,8 +2,8 @@ package primitives
 
 type Piece struct {
 	Name rune
-	Row int
-	Col int
+	Row  int
+	Col  int
 }
 
 type Attacks interface {

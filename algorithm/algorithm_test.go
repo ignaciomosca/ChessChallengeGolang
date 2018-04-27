@@ -47,16 +47,6 @@ func TestNQueen(t *testing.T) {
 	var solutions []board.Board
 	var testedConfigurations []board.Board
 	Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, &testedConfigurations)
-
-	var keys []board.Board
-	for _, k := range solutions {
-		keys = append(keys, k)
-	}
-
-	for _, b := range keys {
-		board.ShowBoard(b)
-	}
-
 	assert.Equal(t, len(solutions), 92, "Test N Queen Problem")
 }
 
@@ -64,10 +54,7 @@ func BenchmarkSolution(b *testing.B) {
 	testBoard := board.CreateBoard(8, 8)
 	var solutions []board.Board
 	var testedConfigurations []board.Board
-
 	Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, &testedConfigurations)
-
 	println("Solutions")
 	println(len(solutions))
-
 }

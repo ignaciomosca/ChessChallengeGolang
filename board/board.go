@@ -32,17 +32,17 @@ func CreateBoardWithPieces(m, n int, used []primitives.Attacks) Board {
 	return Board{m, n, board, used}
 }
 
-func initializeBoard(runes [][]rune, m,n int) {
-	for i:=1;i<m;i++{
-		for j:=1;j<n;j++{
-			runes[i][j]='_'
+func initializeBoard(runes [][]rune, m, n int) {
+	for i := 1; i < m; i++ {
+		for j := 1; j < n; j++ {
+			runes[i][j] = '_'
 		}
 	}
 }
 
 // usedPieces pieces to be set in the Board
 func addUsedPieces(board [][]rune, used []primitives.Attacks) {
-	for _,piece := range used {
+	for _, piece := range used {
 		board[piece.Row()][piece.Col()] = piece.Name()
 	}
 }
@@ -68,7 +68,7 @@ func IsSafe(b Board, c primitives.Attacks) bool {
 }
 
 func doesNotAttackOtherPieces(usedPieces []primitives.Attacks, c primitives.Attacks) bool {
-	for _,p := range usedPieces {
+	for _, p := range usedPieces {
 		if p.Attacks(c) || c.Attacks(p) {
 			return false
 		}

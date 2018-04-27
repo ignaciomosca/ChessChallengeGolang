@@ -31,11 +31,10 @@ func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigur
 }
 
 func contains(boardContains b.Board, testedConfigurations []b.Board) bool {
-	for _,k := range testedConfigurations {
-		if reflect.DeepEqual(k.Board, boardContains.Board) {
+	for _, k := range testedConfigurations {
+		if len(k.Used) == len(boardContains.Used) && reflect.DeepEqual(k.Board, boardContains.Board) {
 			return true
 		}
 	}
 	return false
 }
-
