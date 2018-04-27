@@ -14,12 +14,12 @@ func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigur
 				if b.IsSafe(board, c) {
 					modifiedBoard := b.Place(board, c)
 					if len(pieces) != 1 {
-						if !contains(&modifiedBoard, testedConfigurations) {
+						if !contains(modifiedBoard, *testedConfigurations) {
 							*testedConfigurations = append(*testedConfigurations, modifiedBoard)
 							Solution(modifiedBoard, pieces[1:], solutions, testedConfigurations)
 						}
 					} else {
-						if !contains(&modifiedBoard, solutions) {
+						if !contains(modifiedBoard, *solutions) {
 							*solutions = append(*solutions, modifiedBoard)
 						}
 					}
@@ -30,9 +30,9 @@ func Solution(board b.Board, pieces []rune, solutions *[]b.Board, testedConfigur
 	return solutions
 }
 
-func contains(boardContains *b.Board, testedConfigurations *[]b.Board) bool {
-	for k := range *testedConfigurations {
-		if reflect.DeepEqual(k, boardContains) {
+func contains(boardContains b.Board, testedConfigurations []b.Board) bool {
+	for _,k := range testedConfigurations {
+		if reflect.DeepEqual(k.Board, boardContains.Board) {
 			return true
 		}
 	}

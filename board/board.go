@@ -2,26 +2,27 @@ package board
 
 import "chess/primitives"
 
-// Board Represents and MxN Chess board
+// Board Represents and MxN Chess Board
 type Board struct {
 	M     int
 	N     int
-	board [][]rune
-	used  map[primitives.Attacks]bool
+	Board [][]rune
+	Used  []primitives.Attacks
 }
 
-// CreateBoard creates an empty board of MxN
+// CreateBoard creates an empty Board of MxN
 func CreateBoard(m, n int) Board {
 	board := make([][]rune, m)
 	for i := range board {
 		board[i] = make([]rune, n)
 	}
 	initializeBoard(board, m, n)
-	return Board{m, n, board, make(map[primitives.Attacks]bool)}
+	var used []primitives.Attacks
+	return Board{m, n, board, used}
 }
 
-// CreateBoardWithPieces creates a board with the pieces being @used
-func CreateBoardWithPieces(m, n int, used map[primitives.Attacks]bool) Board {
+// CreateBoardWithPieces creates a Board with the pieces being @Used
+func CreateBoardWithPieces(m, n int, used []primitives.Attacks) Board {
 	board := make([][]rune, m)
 	for i := range board {
 		board[i] = make([]rune, n)
@@ -39,9 +40,9 @@ func initializeBoard(runes [][]rune, m,n int) {
 	}
 }
 
-// usedPieces pieces to be set in the board
-func addUsedPieces(board [][]rune, used map[primitives.Attacks]bool) {
-	for piece := range used {
+// usedPieces pieces to be set in the Board
+func addUsedPieces(board [][]rune, used []primitives.Attacks) {
+	for _,piece := range used {
 		board[piece.Row()][piece.Col()] = piece.Name()
 	}
 }
@@ -49,7 +50,7 @@ func addUsedPieces(board [][]rune, used map[primitives.Attacks]bool) {
 func ShowBoard(board Board) {
 	for i := 1; i < board.M; i++ {
 		for j := 1; j < board.N; j++ {
-			print(string(board.board[i][j]))
+			print(string(board.Board[i][j]))
 		}
 		println()
 	}
@@ -57,18 +58,17 @@ func ShowBoard(board Board) {
 }
 
 func Place(board Board, piece primitives.Attacks) Board {
-	board.used[piece] = true
-	return CreateBoardWithPieces(board.M, board.N, board.used)
+	return CreateBoardWithPieces(board.M, board.N, append(board.Used, piece))
 }
 
-// IsSafe return true if no other piece in the board gets attacked by c and if c is not already placed
+// IsSafe return true if no other piece in the Board gets attacked by c and if c is not already placed
 func IsSafe(b Board, c primitives.Attacks) bool {
-	doesNotAttackOtherPieces := doesNotAttackOtherPieces(b.used, c)
-	return doesNotAttackOtherPieces && notYetPlaced(b, c)
+	doesNotAttack := doesNotAttackOtherPieces(b.Used, c)
+	return doesNotAttack && notYetPlaced(b, c)
 }
 
-func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitives.Attacks) bool {
-	for p := range usedPieces {
+func doesNotAttackOtherPieces(usedPieces []primitives.Attacks, c primitives.Attacks) bool {
+	for _,p := range usedPieces {
 		if p.Attacks(c) || c.Attacks(p) {
 			return false
 		}
@@ -77,5 +77,5 @@ func doesNotAttackOtherPieces(usedPieces map[primitives.Attacks]bool, c primitiv
 }
 
 func notYetPlaced(b Board, c primitives.Attacks) bool {
-	return b.board[c.Row()][c.Col()] == '_'
+	return b.Board[c.Row()][c.Col()] == '_'
 }
