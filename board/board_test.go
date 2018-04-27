@@ -22,8 +22,8 @@ func TestBoard_Place(t *testing.T) {
 	assert.Equal(t, 1, len(newBoard.Used), "add piece to Board")
 
 	queen := pieces.CreateQueen(2,2)
-	Place(newBoard, queen)
-	assert.Equal(t, 2, len(newBoard.Used), "add another piece to Board")
+	addSecondPiece := Place(newBoard, queen)
+	assert.Equal(t, 2, len(addSecondPiece.Used), "add another piece to Board")
 }
 
 func TestSameBoardWithPieces(t *testing.T) {
@@ -33,7 +33,7 @@ func TestSameBoardWithPieces(t *testing.T) {
 	piecesB := []primitives.Attacks{ queenA, kingA}
 	boardA := CreateBoardWithPieces(9, 9, piecesA)
 	boardB := CreateBoardWithPieces(9, 9, piecesB)
-	result := reflect.DeepEqual(boardA, boardB)
+	result := reflect.DeepEqual(boardA.Board, boardB.Board)
 	assert.Equal(t, result, true, "Board A == Board B")
 }
 
