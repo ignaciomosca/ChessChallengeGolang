@@ -1,6 +1,9 @@
 package pieces
 
-import piece "chess/primitives"
+import (
+	piece "chess/primitives"
+	"fmt"
+)
 
 type Rook struct {
 	piece.Piece
@@ -21,3 +24,8 @@ func (r Rook) Row() int { return r.Piece.Row }
 func (r Rook) Col() int { return r.Piece.Col }
 
 func (r Rook) Name() rune { return r.Piece.Name }
+
+func (r Rook) ToString() string {
+	t := string(r.Name())
+	return fmt.Sprintf("%s%d%d", t, r.Row(), r.Col())
+}

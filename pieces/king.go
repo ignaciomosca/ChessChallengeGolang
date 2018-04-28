@@ -1,6 +1,9 @@
 package pieces
 
-import piece "chess/primitives"
+import (
+	piece "chess/primitives"
+	"fmt"
+)
 
 type King struct {
 	piece.Piece
@@ -33,3 +36,8 @@ func (k King) Row() int { return k.Piece.Row }
 func (k King) Col() int { return k.Piece.Col }
 
 func (k King) Name() rune { return k.Piece.Name }
+
+func (k King) ToString() string {
+	r := string(k.Name())
+	return fmt.Sprintf("%s%d%d", r, k.Row(), k.Col())
+}

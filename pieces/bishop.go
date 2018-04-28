@@ -3,6 +3,7 @@ package pieces
 import (
 	piece "chess/primitives"
 	"chess/utils"
+	"fmt"
 )
 
 // Bishop represents a Bishop in a Chessboard
@@ -23,3 +24,8 @@ func (b Bishop) Row() int { return b.Piece.Row }
 func (b Bishop) Col() int { return b.Piece.Col }
 
 func (b Bishop) Name() rune { return b.Piece.Name }
+
+func (b Bishop) ToString() string {
+	r := string(b.Name())
+	return fmt.Sprintf("%s%d%d", r, b.Row(), b.Col())
+}

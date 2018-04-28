@@ -3,6 +3,7 @@ package pieces
 import (
 	piece "chess/primitives"
 	"chess/utils"
+	"fmt"
 )
 
 type Queen struct {
@@ -25,3 +26,8 @@ func (q Queen) Row() int { return q.Piece.Row }
 func (q Queen) Col() int { return q.Piece.Col }
 
 func (q Queen) Name() rune { return q.Piece.Name }
+
+func (q Queen) ToString() string {
+	r := string(q.Name())
+	return fmt.Sprintf("%s%d%d", r, q.Row(), q.Col())
+}

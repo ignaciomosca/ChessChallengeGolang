@@ -2,6 +2,7 @@ package pieces
 
 import (
 	piece "chess/primitives"
+	"fmt"
 )
 
 type Knight struct {
@@ -34,3 +35,8 @@ func (k Knight) Row() int { return k.Piece.Row }
 func (k Knight) Col() int { return k.Piece.Col }
 
 func (k Knight) Name() rune { return k.Piece.Name }
+
+func (k Knight) ToString() string {
+	r := string(k.Name())
+	return fmt.Sprintf("%s%d%d", r, k.Row(), k.Col())
+}

@@ -11,4 +11,5 @@ type Attacks interface {
 	Row() int
 	Col() int
 	Name() rune
+	ToString() string
 }
