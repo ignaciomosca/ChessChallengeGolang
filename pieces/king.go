@@ -1,7 +1,7 @@
 package pieces
 
 import (
-	piece "chess/primitives"
+	piece "ChessChallengeGolang/primitives"
 	"fmt"
 )
 

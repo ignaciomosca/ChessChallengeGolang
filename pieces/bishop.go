@@ -1,8 +1,8 @@
 package pieces
 
 import (
-	piece "chess/primitives"
-	"chess/utils"
+	piece "ChessChallengeGolang/primitives"
+	"ChessChallengeGolang/utils"
 	"fmt"
 )
 
@@ -16,7 +16,7 @@ func CreateBishop(row, col int) Bishop {
 }
 
 func (b Bishop) Attacks(dest piece.Attacks) bool {
-	return utils.Abs(dest.Row()-b.Row()) == utils.Abs(dest.Col()-b.Col());
+	return utils.Abs(dest.Row()-b.Row()) == utils.Abs(dest.Col()-b.Col())
 }
 
 func (b Bishop) Row() int { return b.Piece.Row }

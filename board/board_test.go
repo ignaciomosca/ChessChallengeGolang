@@ -1,11 +1,12 @@
 package board
 
 import (
-	"testing"
-	"github.com/stretchr/testify/assert"
+	"ChessChallengeGolang/pieces"
+	"ChessChallengeGolang/primitives"
 	"reflect"
-	"chess/primitives"
-	"chess/pieces"
+	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestBoardEquals(t *testing.T) {

@@ -1,8 +1,8 @@
 package algorithm
 
 import (
-	b "chess/board"
-	p "chess/pieces"
+	b "ChessChallengeGolang/board"
+	p "ChessChallengeGolang/pieces"
 	"chess/primitives"
 	"sort"
 )

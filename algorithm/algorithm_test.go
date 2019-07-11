@@ -1,8 +1,9 @@
 package algorithm
 
 import (
+	"ChessChallengeGolang/board"
 	"testing"
-	"chess/board"
+
 	"github.com/stretchr/testify/assert"
 )
 
