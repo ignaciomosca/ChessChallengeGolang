@@ -1,16 +1,17 @@
 package main
 
 import (
-	"chess/board"
-	"chess/algorithm"
+	"ChessChallengeGolang/algorithm"
+	"ChessChallengeGolang/board"
+	"ChessChallengeGolang/primitives"
 )
 
 func main() {
 	testBoard := board.CreateBoard(8, 8)
 	var solutions []board.Board
-	var testedConfigurations []board.Board
+	var testedConfigurations map[int][]primitives.Attacks
 
-	algorithm.Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, &testedConfigurations)
+	algorithm.Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, testedConfigurations)
 
 	println("Solutions")
 	println(len(solutions))
