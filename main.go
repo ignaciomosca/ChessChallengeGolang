@@ -9,7 +9,7 @@ import (
 func main() {
 	testBoard := board.CreateBoard(8, 8)
 	var solutions []board.Board
-	var testedConfigurations map[int][]primitives.Attacks
+	testedConfigurations := make(map[int][]primitives.Attacks)
 
 	algorithm.Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, testedConfigurations)
 

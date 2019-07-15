@@ -30,7 +30,7 @@ func Test3x3Board2Kings1Rook(t *testing.T) {
 func Test4x4Board2Rooks4Knights(t *testing.T) {
 	testBoard := board.CreateBoard(5, 5)
 	solutions := []board.Board{}
-	var testedConfigurations map[int][]primitives.Attacks
+	testedConfigurations := make(map[int][]primitives.Attacks)
 
 	Solution(testBoard, []rune{'N', 'N', 'N', 'N', 'R', 'R'}, &solutions, testedConfigurations)
 
@@ -49,7 +49,7 @@ func Test4x4Board2Rooks4Knights(t *testing.T) {
 func TestNQueen(t *testing.T) {
 	testBoard := board.CreateBoard(9, 9)
 	var solutions []board.Board
-	var testedConfigurations map[int][]primitives.Attacks
+	testedConfigurations := make(map[int][]primitives.Attacks)
 	Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, testedConfigurations)
 	assert.Equal(t, 92, len(solutions), "Test N Queen Problem")
 }
@@ -57,7 +57,7 @@ func TestNQueen(t *testing.T) {
 func BenchmarkSolution(b *testing.B) {
 	testBoard := board.CreateBoard(8, 8)
 	var solutions []board.Board
-	var testedConfigurations map[int][]primitives.Attacks
+	testedConfigurations := make(map[int][]primitives.Attacks)
 	Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, testedConfigurations)
 	println("Solutions")
 	println(len(solutions))

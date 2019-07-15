@@ -58,10 +58,14 @@ func samePieces(used1, used2 []primitives.Attacks) bool {
 			return x.Name() < y.Name()
 		})
 	}
-	for i := range u1 {
-		if u1[i].Name() != u2[i].Name() || u1[i].Row() != u2[i].Row() || u1[i].Col() != u2[i].Col() {
-			return false
+	if len(u1) != len(u2) {
+		return false
+	} else {
+		for i := range u1 {
+			if u1[i].Name() != u2[i].Name() || u1[i].Row() != u2[i].Row() || u1[i].Col() != u2[i].Col() {
+				return false
+			}
 		}
+		return true
 	}
-	return true
 }
