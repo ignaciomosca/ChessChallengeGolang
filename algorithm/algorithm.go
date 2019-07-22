@@ -3,7 +3,7 @@ package algorithm
 import (
 	b "ChessChallengeGolang/board"
 	p "ChessChallengeGolang/pieces"
-	"chess/primitives"
+	"ChessChallengeGolang/primitives"
 	"sort"
 )
 
@@ -41,31 +41,31 @@ func contains(boardContains b.Board, testedConfigurations []b.Board) bool {
 	return false
 }
 
-func SamePieces(board1, board2 []primitives.Attacks) bool{
+func SamePieces(board1, board2 []primitives.Attacks) bool {
 	pieces1 := piecesToString(board1)
 	pieces2 := piecesToString(board2)
 	sort.Strings(pieces1)
 	sort.Strings(pieces2)
-	for i:=0; i<len(pieces1);i++{
-		if pieces1[i]!=pieces2[i]{
+	for i := 0; i < len(pieces1); i++ {
+		if pieces1[i] != pieces2[i] {
 			return false
 		}
 	}
 	return true
 }
 
-func piecesToString(board []primitives.Attacks) []string{
+func piecesToString(board []primitives.Attacks) []string {
 	var results []string
-	for _, p := range board{
+	for _, p := range board {
 		results = append(results, p.ToString())
 	}
 	return results
 }
 
-func EqualBoards(board1 [][]rune, board2 [][]rune, M, N int) bool{
-	for i:=1; i< M; i++ {
-		for j:=1; j< N; j++ {
-			if board1[i][j]!=board2[i][j] {
+func EqualBoards(board1 [][]rune, board2 [][]rune, M, N int) bool {
+	for i := 1; i < M; i++ {
+		for j := 1; j < N; j++ {
+			if board1[i][j] != board2[i][j] {
 				return false
 			}
 		}
