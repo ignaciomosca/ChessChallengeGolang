@@ -12,6 +12,7 @@
 *.out
 
 # GoLand
+.idea/
 .idea/workspace.xml
 .idea/modules.xml
 .idea/misc.xml

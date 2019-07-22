@@ -18,16 +18,14 @@ func (k Knight) Attacks(dest piece.Attacks) bool {
 	col := k.Col()
 	xMoves := []int{1, 2, 2, 1, -1, -2, -2, -1}
 	yMoves := []int{-2, -1, 1, 2, 2, 1, -1, -2}
-	possibleMoves := make(map[piece.Attacks]bool)
 	for i := 0; i < 8; i++ {
 		destRow := row + xMoves[i]
 		destCol := col + yMoves[i]
-		if destRow > 0 && destCol > 0 {
-			createPiece := CreatePiece(dest.Name(), destRow, destCol)
-			possibleMoves[createPiece] = true
+		if dest.Row() == destRow && dest.Col() == destCol {
+			return true
 		}
 	}
-	return possibleMoves[dest]
+	return false
 }
 
 func (k Knight) Row() int { return k.Piece.Row }
