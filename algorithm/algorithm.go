@@ -1,9 +1,9 @@
 package algorithm
 
 import (
-	b "ChessChallengeGolang/board"
-	p "ChessChallengeGolang/pieces"
-	"ChessChallengeGolang/primitives"
+	b "chesschallengegolang/board"
+	p "chesschallengegolang/pieces"
+	"chesschallengegolang/primitives"
 	"sort"
 )
 

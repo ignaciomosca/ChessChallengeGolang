@@ -1,8 +1,8 @@
 package board
 
 import (
-	"ChessChallengeGolang/pieces"
-	"ChessChallengeGolang/primitives"
+	"chesschallengegolang/pieces"
+	"chesschallengegolang/primitives"
 	"reflect"
 	"testing"
 

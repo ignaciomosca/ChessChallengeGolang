@@ -1,6 +1,6 @@
 package board
 
-import "ChessChallengeGolang/primitives"
+import "chesschallengegolang/primitives"
 
 // Board Represents and MxN Chess Board
 type Board struct {

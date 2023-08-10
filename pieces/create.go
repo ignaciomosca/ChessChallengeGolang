@@ -1,6 +1,6 @@
 package pieces
 
-import "ChessChallengeGolang/primitives"
+import "chesschallengegolang/primitives"
 
 func CreatePiece(piece rune, row, col int) primitives.Attacks {
 	switch piece {

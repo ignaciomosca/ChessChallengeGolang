@@ -1,8 +1,8 @@
 package main
 
 import (
-	"ChessChallengeGolang/algorithm"
-	"ChessChallengeGolang/board"
+	"chesschallengegolang/algorithm"
+	"chesschallengegolang/board"
 )
 
 func main() {
