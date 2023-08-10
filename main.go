@@ -2,15 +2,12 @@ package main
 
 import (
 	"chesschallengegolang/algorithm"
-	"chesschallengegolang/board"
 )
 
 func main() {
-	testBoard := board.CreateBoard(9, 9)
-	solutions := make(map[string]bool)
-	testedConfigurations := make(map[string]bool)
+	pieceCounts := map[rune]int{'K': 2, 'Q': 2, 'B': 2, 'R': 0, 'N': 1}
 
-	algorithm.Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, &testedConfigurations)
+	solutions := algorithm.Solution(8, 8, pieceCounts)
 
 	println("Solutions")
 	println(len(solutions))

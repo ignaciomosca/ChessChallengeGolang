@@ -15,6 +15,6 @@ func CreatePiece(piece rune, row, col int) primitives.Attacks {
 	case 'B':
 		return CreateBishop(row, col)
 	default:
-		panic("Unknown Piece")
+		panic("Unknown Piece " + string(piece))
 	}
 }
