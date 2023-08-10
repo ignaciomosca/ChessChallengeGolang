@@ -4,10 +4,11 @@ import "chesschallengegolang/primitives"
 
 // Board Represents and MxN Chess Board
 type Board struct {
-	M     int
-	N     int
-	Board [][]rune
-	Used  []primitives.Attacks
+	M            int
+	N            int
+	Board        [][]rune
+	Used         []primitives.Attacks
+	ConfigLookup map[string]bool // Map for checking configuration uniqueness
 }
 
 // CreateBoard creates an empty Board of MxN
@@ -18,7 +19,7 @@ func CreateBoard(m, n int) Board {
 	}
 	initializeBoard(board, m, n)
 	var used []primitives.Attacks
-	return Board{m, n, board, used}
+	return Board{m, n, board, used, make(map[string]bool)}
 }
 
 // CreateBoardWithPieces creates a Board with the pieces being @Used
@@ -29,7 +30,7 @@ func CreateBoardWithPieces(m, n int, used []primitives.Attacks) Board {
 	}
 	initializeBoard(board, m, n)
 	addUsedPieces(board, used)
-	return Board{m, n, board, used}
+	return Board{m, n, board, used, make(map[string]bool)}
 }
 
 func initializeBoard(runes [][]rune, m, n int) {

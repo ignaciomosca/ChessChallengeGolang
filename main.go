@@ -7,8 +7,8 @@ import (
 
 func main() {
 	testBoard := board.CreateBoard(9, 9)
-	var solutions []board.Board
-	var testedConfigurations []board.Board
+	solutions := make(map[string]bool)
+	testedConfigurations := make(map[string]bool)
 
 	algorithm.Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, &testedConfigurations)
 
