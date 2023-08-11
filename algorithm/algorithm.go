@@ -2,7 +2,7 @@ package algorithm
 
 import (
 	b "chesschallengegolang/board"
-	p "chesschallengegolang/pieces"
+	"chesschallengegolang/pieces"
 	"chesschallengegolang/primitives"
 	"sort"
 	"strings"
@@ -37,25 +37,25 @@ func solve(board b.Board, remainingPieces map[rune]int, solutions *[]b.Board, vi
 		configStringSolutionBoard := configurationToString(solutionBoard)
 		(*visitedConfigs)[configStringSolutionBoard] = true
 		*solutions = append(*solutions, solutionBoard)
-		return
-	}
+	} else {
+		remainingCounts := make(map[rune]int)
+		for k, count := range remainingPieces {
+			remainingCounts[k] = count
+		}
 
-	remainingCounts := make(map[rune]int)
-	for k, count := range remainingPieces {
-		remainingCounts[k] = count
-	}
-
-	for i := 1; i < board.M; i++ {
-		for j := 1; j < board.N; j++ {
-			piece := p.CreatePiece(nextPieceType, i, j)
-			if board.Board[i][j] == '_' && b.IsSafe(board, piece) {
-				modifiedBoard := b.Place(board, piece)
-				remainingCounts[nextPieceType]--
-				solve(modifiedBoard, remainingCounts, solutions, visitedConfigs)
-				remainingCounts[nextPieceType]++
+		for i := 1; i < board.M; i++ {
+			for j := 1; j < board.N; j++ {
+				piece := pieces.CreatePiece(nextPieceType, i, j)
+				if b.IsSafe(board, piece) {
+					modifiedBoard := b.Place(board, piece)
+					remainingCounts[nextPieceType]--
+					solve(modifiedBoard, remainingCounts, solutions, visitedConfigs)
+					remainingCounts[nextPieceType]++
+				}
 			}
 		}
 	}
+
 }
 
 func copyBoard(original b.Board) b.Board {

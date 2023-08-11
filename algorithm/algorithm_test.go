@@ -8,10 +8,8 @@ import (
 )
 
 func Test3x3Board2Kings1Rook(t *testing.T) {
-	testBoard := board.CreateBoard(4, 4)
-	var solutions []board.Board
-	var testedConfigurations []board.Board
-	Solution(testBoard, []rune{'K', 'K', 'R'}, &solutions, &testedConfigurations)
+	pieceCounts := map[rune]int{'K': 2, 'Q': 0, 'B': 0, 'R': 1, 'N': 0}
+	solutions := Solution(4, 4, pieceCounts)
 
 	keys := []board.Board{}
 	for _, k := range solutions {
@@ -26,10 +24,8 @@ func Test3x3Board2Kings1Rook(t *testing.T) {
 }
 
 func Test4x4Board2Rooks4Knights(t *testing.T) {
-	testBoard := board.CreateBoard(5, 5)
-	solutions := []board.Board{}
-	testedConfigurations := []board.Board{}
-	Solution(testBoard, []rune{'N', 'N', 'N', 'N', 'R', 'R'}, &solutions, &testedConfigurations)
+	pieceCounts := map[rune]int{'K': 0, 'Q': 0, 'B': 0, 'R': 2, 'N': 4}
+	solutions := Solution(5, 5, pieceCounts)
 
 	keys := []board.Board{}
 	for _, k := range solutions {
@@ -44,18 +40,14 @@ func Test4x4Board2Rooks4Knights(t *testing.T) {
 }
 
 func TestNQueen(t *testing.T) {
-	testBoard := board.CreateBoard(9, 9)
-	var solutions []board.Board
-	var testedConfigurations []board.Board
-	Solution(testBoard, []rune{'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q', 'Q'}, &solutions, &testedConfigurations)
+	pieceCounts := map[rune]int{'K': 0, 'Q': 8, 'B': 0, 'R': 0, 'N': 0}
+	solutions := Solution(9, 9, pieceCounts)
 	assert.Equal(t, len(solutions), 92, "Test N Queen Problem")
 }
 
 func BenchmarkSolution(b *testing.B) {
-	testBoard := board.CreateBoard(8, 8)
-	var solutions []board.Board
-	var testedConfigurations []board.Board
-	Solution(testBoard, []rune{'K', 'K', 'Q', 'Q', 'B', 'B', 'N'}, &solutions, &testedConfigurations)
+	pieceCounts := map[rune]int{'K': 2, 'Q': 2, 'B': 2, 'R': 0, 'N': 1}
+	solutions := Solution(8, 8, pieceCounts)
 	println("Solutions")
 	println(len(solutions))
 }
